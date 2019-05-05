@@ -1,0 +1,38 @@
+{
+  "name": "@zulfikaradnan/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "npm run lint",
+    "lint": "eslint -c index.js index.js",
+    "lint:fix": "eslint -c index.js index.js --fix",
+    "test": "npm run lint",
+    "release": "npm test && standard-version",
+    "preversion": "echo \"Use npm run release instead\" && exit 1",
+    "release:patch": "npm run release -- --release-as patch",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:major": "npm run release -- --release-as major",
+    "release:beta": "npm run release -- --prerelease beta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zulfikaradnan/node-eslint-config.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zulfikaradnan/node-eslint-config/issues"
+  },
+  "homepage": "https://github.com/zulfikaradnan/node-eslint-config#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-security": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "standard-version": "^5.0.2"
+  }
+}
